@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Repair | Abhishek Enterprises — Bhopal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><div class="logo-mark">AE</div>Abhishek<span>Enterprises</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html" class="active">Book</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Repair</a></li>
+    </ul>
+    <button class="hamburger">☰</button>
+  </div>
+</header>
+
+<div class="form-page">
+  <div class="form-card" data-animate>
+    <h1>Book Your Repair</h1>
+    <p class="subtitle">Fill details — confirmation WhatsApp pe milega</p>
+
+    <form id="bookingForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" id="bName" required placeholder="Aapka naam">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" id="bPhone" required placeholder="63927xxxxx" pattern="[0-9]{10}">
+        </div>
+        <div class="form-group">
+          <label>Appliance</label>
+          <select id="bAppliance" required>
+            <option value="">Select</option>
+            <option>AC</option>
+            <option>Refrigerator</option>
+            <option>Washing Machine</option>
+            <option>Microwave</option>
+            <option>Tyre / Tube</option>
+            <option>Geyser</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Area</label>
+          <input type="text" id="bAddress" required placeholder="Colony / area">
+        </div>
+      </div>
+
+      <div class="optional-toggle" onclick="document.getElementById('optFields').classList.toggle('open')">
+        + Add date & problem details (optional)
+      </div>
+
+      <div class="optional-fields" id="optFields">
+        <div class="form-group" style="margin-bottom:12px;">
+          <label>Preferred Date</label>
+          <input type="date" id="bDate">
+        </div>
+        <div class="form-group" style="margin-bottom:12px;">
+          <label>Problem Description</label>
+          <textarea id="bIssue" rows="2" placeholder="Kya issue hai?"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-wa">Book on WhatsApp</button>
+      <p class="helper">Ya direct call: <a href="tel:+916392765178">63927 65178</a></p>
+    </form>
+  </div>
+</div>
+
+<a href="#" onclick="sendToWhatsApp('Hi Abhishek Enterprises, mujhe repair service chahiye'); return false;" class="wa-float">💬</a>
+<script src="js/main.js"></script>
+</body>
+</html>

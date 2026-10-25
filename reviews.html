@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Abhishek Enterprises — Bhopal</title>
+  <meta name="description" content="Read customer reviews and share your experience with Abhishek Enterprises. Scan QR to leave a Google review.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo"><div class="logo-mark">AE</div>Abhishek<span>Enterprises</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="booking.html">Book</a></li>
+      <li><a href="reviews.html" class="active">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" class="nav-cta">Book Repair</a></li>
+    </ul>
+    <button class="hamburger">☰</button>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Customer Reviews</h1>
+    <p>Real feedback from customers across Bhopal.</p>
+  </div>
+</div>
+
+<!-- GOOGLE REVIEW QR SECTION -->
+<section class="tight">
+  <div class="container">
+    <div class="google-review-card" data-animate>
+      <div class="gr-left">
+        <div class="gr-badge">⭐ Google Reviews</div>
+        <h2>Happy with our service?</h2>
+        <p>Scan the QR code to leave a Google review — it takes 30 seconds and helps other Bhopal customers find us.</p>
+        <div class="gr-stats">
+          <div><strong>4.9★</strong><span>Avg Rating</span></div>
+          <div><strong>1,200+</strong><span>Reviews</span></div>
+          <div><strong>98%</strong><span>Recommend</span></div>
+        </div>
+        <div class="gr-actions">
+          <a href="https://search.google.com/local/writereview?placeid=ChIJTxUxnRFFfDkRXUodu3P3CHo" target="_blank" rel="noopener" class="btn btn-primary">
+            ⭐ Write a Google Review
+          </a>
+          <a href="#" onclick="sendToWhatsApp('Hi Abhishek Enterprises, I want to share feedback'); return false;" class="btn btn-outline">
+            💬 Send Feedback
+          </a>
+        </div>
+      </div>
+      <div class="gr-right">
+        <div class="qr-box">
+          <img
+            src="images/Abhishek Enterprises.png"
+            alt="Scan to review Abhishek Enterprises on Google"
+            width="220" height="220"
+            loading="lazy">
+          <div class="qr-label">Scan to review on Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXISTING REVIEWS -->
+<section class="tight">
+  <div class="container">
+    <div class="reviews-wrap">
+      <div class="review-featured" data-animate>
+        <div class="stars">★★★★★</div>
+        <p>AC gas filling bahut fast hua. Technician time pe aaya, kaam clean kiya, aur price bhi reasonable tha. Abhishek Enterprises is highly recommended for anyone in Bhopal!</p>
+        <div class="reviewer">
+          <div class="avatar">R</div>
+          <div><strong>Rahul Sharma</strong><small>MP Nagar, Bhopal</small></div>
+        </div>
+      </div>
+      <div class="review-mini-grid">
+        <div class="review-mini" data-animate data-delay="1">
+          <div class="stars">★★★★★</div>
+          <p>Fridge cooling issue same day solve. Very professional.</p>
+          <div class="reviewer"><div class="avatar">P</div><div><strong>Priya Verma</strong><small>Kolar</small></div></div>
+        </div>
+        <div class="review-mini" data-animate data-delay="2">
+          <div class="stars">★★★★★</div>
+          <p>Washing machine repair done nicely. Warranty mila.</p>
+          <div class="reviewer"><div class="avatar">A</div><div><strong>Amit Patel</strong><small>Habibganj</small></div></div>
+        </div>
+        <div class="review-mini" data-animate data-delay="3">
+          <div class="stars">★★★★☆</div>
+          <p>Microwave heating problem fix. Good technician.</p>
+          <div class="reviewer"><div class="avatar">S</div><div><strong>Sneha Jain</strong><small>Ayodhya Bypass</small></div></div>
+        </div>
+        <div class="review-mini" data-animate data-delay="4">
+          <div class="stars">★★★★★</div>
+          <p>Tube TV repair before Diwali. Great work!</p>
+          <div class="reviewer"><div class="avatar">V</div><div><strong>Vikas Yadav</strong><small>Bairagarh</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM FALLBACK -->
+<section class="tight" style="background:var(--light);">
+  <div class="container">
+    <div class="section-head center" data-animate>
+      <div class="section-tag">Or Share Privately</div>
+      <h2>Aapka feedback humare liye important hai.</h2>
+      <p>Google pe public review chhodo, ya yahan private feedback bhejo.</p>
+    </div>
+    <div class="form-card" data-animate data-delay="1" style="margin:0 auto;">
+      <form id="reviewForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="rName" required placeholder="Aapka naam">
+          </div>
+          <div class="form-group">
+            <label>Rating</label>
+            <select id="rRating" required>
+              <option value="5">★★★★★ (5)</option>
+              <option value="4">★★★★☆ (4)</option>
+              <option value="3">★★★☆☆ (3)</option>
+              <option value="2">★★☆☆☆ (2)</option>
+              <option value="1">★☆☆☆☆ (1)</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Your Review</label>
+            <textarea id="rReview" rows="3" required placeholder="Apna experience likhein"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-wa">Submit on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-mark">AE</div>Abhishek<span>Enterprises</span></div>
+        <p>Trusted home appliance repair across all areas of Bhopal. Fast, affordable, warranty-backed.</p>
+        <div class="footer-social">
+          <a href="#" title="Facebook">f</a>
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" onclick="sendToWhatsApp('Hi Abhishek Enterprises'); return false;" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="booking.html">Book Repair</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">AC Repair</a></li>
+          <li><a href="services.html">Fridge Repair</a></li>
+          <li><a href="services.html">Washing Machine</a></li>
+          <li><a href="services.html">Microwave Oven</a></li>
+          <li><a href="services.html">Tube / TV</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <p><span>📞</span> <a href="tel:+916392765178">+91 63927 65178</a></p>
+        <p><span>📍</span> Bhopal, Madhya Pradesh</p>
+        <p><span>🕒</span> Everyday, 8 AM – 8 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Abhishek Enterprises. All rights reserved.</div>
+  </div>
+</footer>
+
+<a href="#" onclick="sendToWhatsApp('Hi Abhishek Enterprises, mujhe repair service chahiye'); return false;" class="wa-float">💬</a>
+<script src="js/main.js"></script>
+</body>
+</html>
